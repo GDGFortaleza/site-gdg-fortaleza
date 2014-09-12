@@ -1,0 +1,103 @@
+<!doctype html>
+<html class="no-js" ng-app="gdgApp" ng-controller="GDGData">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GDG Fortaleza</title>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=pt-BR" rel=
+    "stylesheet">
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <style type="text/css">
+    .top-background {
+      background: url({{gdgData.backgroundUrl}});
+      background-size: cover;
+      background-position: center -470px;
+      margin: 0 0 20px;
+    }
+    </style>
+  </head>
+  <body>
+
+  <div class="top-background">
+    <div class="row">
+      <div class="large-12 columns">
+        <a href="{{gdgData.siteUrl}}" class="logo"><img ng-src="{{gdgData.logoUrl}}" /></a>
+      </div>
+    </div>
+  </div>
+
+    <div class="row">
+      <div class="large-9 columns">
+        <h3>{{gdgData.subtitle}}</h3>
+        <p>{{gdgData.short}}</p>
+        <a href="https://plus.google.com/u/0/{{gdgData.id}}/about" class="button radius">Saiba mais</a>
+      </div>
+      <div class="large-3 columns">
+        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+        <div class="g-plus" data-href="https://plus.google.com/{{gdgData.id}}" data-width="200" rel="author"></div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="large-6 columns">
+      <h3>Google+</h3>
+        <div class="google-plus-widget">
+          <ul ng-repeat="post in posts | limitTo:gdgData.postLimit" class="feedItems">
+            <li>
+            <p ng-bind-html="renderHtml(post.object.content)"></p>
+            <div ng-if="post.object.attachments">
+              <div ng-repeat="attachment in post.object.attachments">
+                <div ng-switch on="attachment.objectType">
+                    <div ng-switch-when="article" class="postAttachments">
+                      <img ng-src="{{attachment.fullImage.url}}" />
+                      <a href="{{attachment.url}}">{{attachment.displayName}}</a>
+                      <span class="small-text">{{attachment.content}}</span>
+                      <div class="clears"></div>
+                    </div>
+                    <div ng-switch-when="url" class="postAttachments">
+                      <a href="{{attachment.url}}">{{attachment.displayName}}</a>
+                    </div>
+                    <div ng-switch-when="event" class="postAttachments">
+                      <strong>Evento:</strong> <a href="{{attachment.url}}">{{attachment.displayName}}</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="socialStatus">
+              <span><a href="{{post.url}}">+{{post.object.plusoners.totalItems}}</a></span>
+              <span>{{post.object.replies.totalItems}} comentários</span>
+              <span>{{post.object.resharers.totalItems}} compartilhamentos</span>
+            </div>
+            </li>
+          </ul>
+        </div>
+
+      <a href="https://plus.google.com/{{gdgData.id}}" class="button radius">Veja mais no Google+</a>
+      </div>
+      <div class="large-6 columns">
+        <h3>Calendário de Eventos</h3>
+        <iframe ng-src="{{gdgData.calendarEmbedUrl}}" frameborder="0" scrolling="no" class="calendarFrame" style="margin-bottom: 20px"></iframe>
+
+        <h3>Google Groups</h3>
+        <p>Entre agora no nosso grupo de discussão.</p>
+        <a href="http://groups.google.com/d/forum/{{gdgData.groupName}}" class="button radius">Grupo {{gdgData.title}}</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <footer>
+        <p class="made">&copy; {{gdgData.title}} - Feito com o <a href="https://github.com/GDG-Recife/gdg-site-boilerplate">gdg-site-boilerplate</a></p>
+      </footer>
+      <div class="color-signature"></div>
+    </div>
+
+    <a href="https://github.com/GDG-Recife/gdg-site-boilerplate"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.16/angular.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/app.js"></script>
+    </script>
+  </body>
+</html>
