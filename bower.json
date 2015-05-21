@@ -1,6 +1,24 @@
 {
-  "name": "foundation-libsass-template",
+  "name": "site-gdg-fortaleza",
   "dependencies": {
-    "foundation": "zurb/bower-foundation"
-  }
+    "fastclick"  :  "1.0.2",
+    "foundation" :  "5.3.1",
+    "jquery"     :  "2.1.1",
+    "jquery-placeholder" : "2.0.8",
+    "jquery.cookie" : "1.4.1",
+    "modernizr" : "2.8.3"
+  },
+  "version": "2.0.0",
+  "homepage": "https://github.com/GDGFortaleza/site-gdg-fortaleza",
+  "description": "Site de gdg de fortaleza",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ]
 }
