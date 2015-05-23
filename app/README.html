@@ -1,0 +1,56 @@
+<h1>gdg-site-boilerplate</h1>
+
+<p>Boilerplate para criar um site simples para os GDGs. O <em>gdg-site-boilerplate</em> gera um site simples e estático, de uma única página, usando apenas AngularJS para definir as informações de cada GDG.</p>
+
+<h2>Configuração</h2>
+
+<p>Você precisa modificar 3 arquivos na estrutura do projeto:</p>
+
+<h3>img/logo_default.png</h3>
+
+<p>Para definir qual a imagem do logo do seu GDG (use o http://gdg-generator.appspot.com/ caso ainda não tenha uma)</p>
+
+<h3>js/config.js</h3>
+
+<p>Este arquivo possui duas variáveis globais essenciais para o funcionamento do site
+<code>js
+var API_KEY = "AIzaSyCZwW2eHtbwUfIsX0ZtxIxTGJn2OnO8GEA";
+var PLUS_ID = "115765717673028641964";
+</code>
+- <strong>API_KEY</strong> é necessária para obter o feed do seu Google+. Você pode pedir uma chave no Developers Console do Google.
+- <strong>PLUS_ID</strong> é a variável que recebe o ID da sua página no Google+, que serve de base para obter todas as informações do site.</p>
+
+<h3>gdg-info.json</h3>
+
+<p>Este arquivo é onde o AngularJS irá pegar todas as informações para inserir no site. Cada atributo do objeto é descrito a seguir:
+- <strong>siteURL</strong>: o endereço do site do GDG
+- <strong>title</strong>: o nome do seu GDG
+- <strong>logoURL</strong>: url do logo, relativa ao / do projeto
+- <strong>backgroundURL</strong>: url do background do cabeçalho, relativo ao / do projeto
+- <strong>subtitle</strong>: título para mensagens de boas vindas do site
+- <strong>short</strong>: pequena descrição do seu GDG
+- <strong>postLimit</strong>: quantos posts do Google+ irão aparecer na página inicial
+- <strong>calendarURL</strong>: endereço do embed do calendario de eventos do seu GDG
+- <strong>groupName</strong>: indentificador do grupo na url do Google Groups</p>
+
+<p>Todos os atributos do arquivo são <strong>obrigatórios</strong>.</p>
+
+<h2>Showcase</h2>
+
+<ul>
+<li><strong>GDG Recife</strong>: http://www.gdgrecife.com
+<em>Seu GDG também está usando? Edite esse arquivo e dê um pull request para atualizarmos a lista! (:</em></li>
+</ul>
+
+
+<h2>Licença</h2>
+
+<h3>The MIT License (MIT)</h3>
+
+<p>Copyright © 2014 Joselito Júnior</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>

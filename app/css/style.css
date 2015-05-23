@@ -1,0 +1,180 @@
+body, h1,h2,h3,h4, .button {
+  font-family: 'Open Sans';
+}
+
+a, a:link, a:visited {
+  color: #427fed;
+}
+
+a.button {
+  color: #fff;
+}
+
+.logo img {
+  margin: 20px auto;
+  width: auto;
+}
+
+.button {
+  font-family: 'Open Sans';
+  background-color: #4285F4;
+  border-radius: 2px;
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.08);
+  font-weight: 400;
+}
+
+.button:hover {
+  background-color: #4173c9;
+}
+
+.top-background {
+  background: url('../img/background-default.png');
+  background-size: cover;
+  background-position: center;
+  margin: 0 0 20px;
+}
+
+.calendarFrame {
+  width: 100%;
+  border: 0;
+  min-height: 400px;
+}
+
+.feedItems {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.feedItems li {
+  margin: 10px 0px 10px 0px;
+  padding: 0;
+}
+
+.clears {
+  clear: both;
+}
+
+.feedItems li span.grey {
+  color: #999;
+}
+
+.feedItems li div.header {
+  margin: 0px 0px 15px 0px;
+  padding: 0px 0px 0px 0px;
+  font-size: 100%;
+  border-bottom: 1px solid #F2F2F2;
+}
+
+.feedItems li div.header img {
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin: 0px 10px 0px 0px;
+  border-radius: 20px;
+}
+
+.feedItems li div.originalPost {
+  margin: 0px 0px 15px 0px;
+  padding: 0px 0px 10px 0px;
+  font-size: 100%;
+  border-bottom: 1px dashed #cccccc;
+}
+
+.feedItems li div.originalPost img {
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin: 0px 10px 0px 0px;
+  border-radius: 20px;
+}
+
+.feedItems li p {
+  text-align: justify;
+  padding: 0px 0px 10px 0px;
+  margin: 0px 0px 10px 0px;
+  border-bottom: 1px dashed #cccccc;
+}
+
+.feedItems li div.originalPost p {
+  text-align: justify;
+  padding: 0px 0px 0px 50px;
+  border: none;
+  margin: 0px;
+}
+
+.feedItems li div.postAttachments {
+  margin: 0px 0px 10px 0px;
+  padding: 0px 0px 10px 0px;
+  border-bottom: 1px dashed #cccccc;
+}
+
+.feedItems li div.postAttachments img {
+  max-width:120px;
+  height: auto;
+  float:left;
+  margin:0px 10px 0px 0px;
+}
+
+.feedItems li div.photo-album a.albumTitle
+{
+  display:block;
+}
+
+.feedItems li div.photo-album img {
+  max-width: 150px;
+  float: left;
+  margin: 10px 10px 0px 0px;
+}
+
+.feedItems li div.postAttachments a.youtube img {
+  margin: 10px 0px 0px 0px;
+  width: 150px;
+  height: 100px;
+  float:none;
+}
+
+.feedItems li div.socialStatus {
+  text-align: right;
+  margin-bottom: 50px;
+}
+
+.feedItems li div.socialStatus span {
+  margin: 0px 10px 0px 0px; 
+}
+
+.color-signature {
+clear: both;
+margin: 30px auto 0;
+width: 100%;
+min-height: 4px;
+background: #000;
+background-image: -webkit-gradient(
+  linear,
+  left top,
+  right top,
+  color-stop(0.25, #008AFA),
+  color-stop(0.25, #FF002B),
+  color-stop(0.5, #FF002B),
+  color-stop(0.5, #FFAA00),
+  color-stop(0.75, #FFAA00),
+  color-stop(0.75, #00A754)
+);
+background-image: -o-linear-gradient(right, #008AFA 25%, #FF002B 25%, #FF002B 50%, #FFAA00 50%, #FFAA00 75%, #00A754 75%);
+background-image: -moz-linear-gradient(right, #008AFA 25%, #FF002B 25%, #FF002B 50%, #FFAA00 50%, #FFAA00 75%, #00A754 75%);
+background-image: -webkit-linear-gradient(right, #008AFA 25%, #FF002B 25%, #FF002B 50%, #FFAA00 50%, #FFAA00 75%, #00A754 75%);
+background-image: -ms-linear-gradient(right, #008AFA 25%, #FF002B 25%, #FF002B 50%, #FFAA00 50%, #FFAA00 75%, #00A754 75%);
+background-image: linear-gradient(to right, #008AFA 25%, #FF002B 25%, #FF002B 50%, #FFAA00 50%, #FFAA00 75%, #00A754 75%);
+}
+
+.small-text {
+  font-size: 0.8em;
+  color: #555;
+}
+
+.made {
+  margin: 20px auto 0;
+  text-align: center;
+  font-size: 0.8em;
+}
